@@ -1,0 +1,50 @@
+@import "mixins_colors";
+
+header {
+  @include contentBody(100%, 80px);
+  position: relative;
+
+  #change_lang_btn {
+    @include buttonStyle(110px, 60px, 0, 0, 1px, solid, black, 10px);
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    right: 10%;
+    top: 10px;
+    span {
+      position: absolute;
+      top: 50%;
+      font-size: 20px;
+      transform: translate(0, -50%);
+    }
+    img {
+      @include contentBody(40px, 40px, auto 0 auto 60px);
+    }
+  }
+
+  #lang_dropdown {
+    visibility: hidden;
+  }
+
+  #menu_btn{
+
+  }
+
+  #mobile_menu{
+    
+  }
+}
+
+footer {
+  @include contentBody(min(100%, 1800px), auto);
+  position: absolute;
+  bottom: 0;
+}
+
+@media screen and (min-width: 1804px) {
+  footer {
+    border-width: 2px 2px 0 2px;
+    border-color: black;
+    border-style: solid;
+  }
+}

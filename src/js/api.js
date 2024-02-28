@@ -26,15 +26,15 @@ async function getAIQstats() {
 
     let lat = cordsData[0].lat;
     let lon = cordsData[0].lon;
-    const options = {
-        method: 'GET',
-        headers: { 'X-Api-Key': 'wrWkYLoRM98tlbLu0CgjjA==VxslqbabF3vOSqvJ' },
-        contentType: 'application/json',
-    };
+    // const options = {
+    //     method: 'GET',
+    //     headers: { 'X-Api-Key': 'wrWkYLoRM98tlbLu0CgjjA==VxslqbabF3vOSqvJ' },
+    //     contentType: 'application/json',
+    // };
 
-    fetch(`https://api.api-ninjas.com/v1/airquality?lat=${lat}&lon=${lon}`, options)
-        .then(response => response.json())
-        .then(response => console.log(response))
-        .catch(err => console.error(err));
+    // fetch(`https://api.api-ninjas.com/v1/airquality?lat=${lat}&lon=${lon}`, options)
+    //     .then(response => response.json())
+    //     .then(response => console.log(response))
+    //     .catch(err => console.error(err));
 
 }

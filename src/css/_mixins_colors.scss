@@ -1,0 +1,35 @@
+$background-color: #D4D4D4;
+$primary-color: #FFFFFF;
+$secondary-color: #231818;
+
+@mixin contentBody($w, $h, $m: 0, $p: 0, $b: 0, $bS: solid, $borC: #000000, $br: 0) {
+  width: $w;
+  height: $h;
+  margin: $m;
+  padding: $p;
+  border-width: $b;
+  border-style: $bS;
+  border-color: $borC;
+  border-radius: $br;
+}
+
+@mixin color($bC, $txtC: #000000) {
+  background-color: $bC;
+  color: $txtC;
+}
+
+@mixin listStyle($bC, $lS: none) {
+  background-color: $bC;
+  list-style: $lS;
+}
+
+@mixin linkStyle($txtC, $txtD) {
+  color: $txtC;
+  text-decoration: $txtD;
+}
+
+@mixin buttonStyle($w, $h, $m: 0, $p: 0, $b: 0, $bS: solid, $borC: #000000, $br: 0, $bC: $primary-color, $txtC: #000000) {
+  @include contentBody($w, $h, $m, $p, $b, $bS, $borC, $br);
+  background-color: $bC;
+  color: $txtC;
+}

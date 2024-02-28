@@ -13,19 +13,25 @@ function init() {
 
     swedishBtn.addEventListener('click', makeLangSwedish);
     englishBtn.addEventListener('click', makeLangEnglish);
+    document.getElementById('change_lang_btn').addEventListener('click', dropDown);
+
 
 } // Slut init
 window.addEventListener('load', init);
 // --------------------------------------------------
 
+function dropDown() {
+    console.log("works");
+}
+
 function makeLangSwedish() {
     let docTitle = document.title;
 
     switch (docTitle) {
-        case "Startpage":
+        case "Air Pollution":
 
             break;
-        case "Restaurant Finder":
+        case "Check The Air":
 
             break;
 
@@ -38,10 +44,10 @@ function makeLangEnglish() {
     let docTitle = document.title;
 
     switch (docTitle) {
-        case "Startsida":
+        case "Luftpollution":
 
             break;
-        case "Restaurang Hittaren":
+        case "Kolla Luften":
 
             break;
 
