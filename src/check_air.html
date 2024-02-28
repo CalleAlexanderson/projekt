@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/lang.js" defer></script>
-    <title>Resturang Hittaren</title>
+    <script src="js/api.js" defer></script>
+    <title>Restaurang Hittaren</title>
 </head>
 
 <body>
@@ -14,12 +15,23 @@
             <a href="index.html" aria-label="tillbaks till startsida"><img src="pictures/placeholder logo.svg" alt=""></a>
         </div>
         <h1>
-            Resturang Hittaren
+            Restaurant Finder
         </h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Startsida</a></li>
+                <li><a href="check_air.html">Resturang Hittaren</a></li>
+            </ul>
+        </nav>
+        <button type="button" id="change_lang_btn" aria-expanded="false"><img src="pictures/earth-europe-solid.svg">Språk</button>
+        <div>
+            <button type="button" class="langBtn" aria-selected="true">Svenska</button>
+            <button type="button" class="langBtn" aria-selected="false">Engelska</button>
+        </div>
     </header>
     <main>
         <h1></h1>
-        <label for="search">Sök Resturang:</label>
+        <label for="search">Sök Stad:</label>
         <div>
             <input type="text" name="search" id="search">
             <button type="button">

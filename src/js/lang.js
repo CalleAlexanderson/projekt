@@ -41,7 +41,7 @@ function makeLangEnglish() {
         case "Startsida":
 
             break;
-        case "Resturang Hittaren":
+        case "Restaurang Hittaren":
 
             break;
 
