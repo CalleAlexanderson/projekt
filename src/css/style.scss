@@ -2,5 +2,10 @@
 @import "header_footer";
 
 body{
-    @include contentBody(min(100%, 1800px), 100%, auto, 0)
+    @include contentBody(min(100%, 1800px), 100%, auto, 0);
+
+    *{
+        margin: 0;
+        padding: 0;
+    }
 }

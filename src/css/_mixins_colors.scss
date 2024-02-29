@@ -1,6 +1,9 @@
 $background-color: #D4D4D4;
 $primary-color: #FFFFFF;
 $secondary-color: #231818;
+$hover-color: #6A9EDA; 
+$active-color: #266EC0;
+@use 'sass:color';
 
 @mixin contentBody($w, $h, $m: 0, $p: 0, $b: 0, $bS: solid, $borC: #000000, $br: 0) {
   width: $w;
@@ -18,8 +21,7 @@ $secondary-color: #231818;
   color: $txtC;
 }
 
-@mixin listStyle($bC, $lS: none) {
-  background-color: $bC;
+@mixin listStyle($lS: none) {
   list-style: $lS;
 }
 
