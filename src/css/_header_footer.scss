@@ -3,6 +3,7 @@
 header {
   @include contentBody(100%, 80px);
   position: relative;
+  border-bottom: 2px solid $active-color;
 
   #logo_link {
     @include contentBody(120px, 100%);
@@ -56,6 +57,14 @@ header {
 
   #lang_dropdown {
     visibility: hidden;
+    position: absolute;
+    right: 10px;
+    top: 70px;
+    display: flex;
+    flex-direction: column;
+    > *{
+      @include contentBody(110px, 60px, 0, 0, 0px 1px 1px, solid, black)
+    }
   }
 
   #menu_btn {
@@ -84,19 +93,17 @@ footer {
   @include contentBody(min(100%, 1800px), auto);
   position: absolute;
   bottom: 0;
+  > * {
+    padding: 2px 5px !important;
+  }
 }
 
 @media screen and (min-width: 601px) {
   header {
-
-    #logo_link {
-      
-    }
-
     h1 {
       left: 50%;
       transform: translate(-50%, -50%);
-    } 
+    }
 
     #change_lang_btn {
       top: 10px;
@@ -168,7 +175,7 @@ footer {
       transition: background-color 0.25s;
       span {
         visibility: visible;
-        top: 50%;
+        top: 29px;
         font-size: 1.3rem;
         transform: translate(0, -50%);
         padding-left: 2px;
@@ -181,9 +188,14 @@ footer {
 }
 
 @media screen and (min-width: 1804px) {
+  header {
+    border-width: 0px 2px 2px 2px;
+    border-color: $active-color;
+    border-style: solid;
+  }
   footer {
     border-width: 2px 2px 0 2px;
-    border-color: black;
+    border-color: $active-color;
     border-style: solid;
   }
 }
