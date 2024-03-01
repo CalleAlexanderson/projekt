@@ -12,8 +12,6 @@ function init() {
     englishBtn = document.getElementsByClassName('langBtn')[1];
     langDiv = document.getElementById('lang_dropdown');
     langbtn = document.getElementById('change_lang_btn');
-    console.log(swedishBtn);
-    console.log(englishBtn);
 
     swedishBtn.addEventListener('click', makeLangSwedish);
     englishBtn.addEventListener('click', makeLangEnglish);
