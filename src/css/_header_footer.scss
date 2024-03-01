@@ -58,12 +58,12 @@ header {
   #lang_dropdown {
     visibility: hidden;
     position: absolute;
-    right: 10px;
-    top: 70px;
+    left: 10px;
+    top: 150px;
     display: flex;
     flex-direction: column;
-    > *{
-      @include contentBody(110px, 60px, 0, 0, 0px 1px 1px, solid, black)
+    > * {
+      @include contentBody(60px, 60px, 0, 0, 0px 1px 1px, solid, black);
     }
   }
 
@@ -112,6 +112,11 @@ footer {
     }
     #menu_btn {
       top: 10px;
+    }
+    #lang_dropdown {
+      right: 80px;
+      left: initial;
+      top: 70px;
     }
   }
 }
@@ -182,6 +187,14 @@ footer {
       }
       img {
         margin-left: 60px;
+      }
+    }
+
+    #lang_dropdown {
+      right: 10px;
+      top: 70px;
+      > * {
+        @include contentBody(110px, 60px, 0, 0, 0px 1px 1px, solid, black);
       }
     }
   }
