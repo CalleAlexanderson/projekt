@@ -2,11 +2,74 @@
 @import "header_footer";
 @import "animations";
 
-body{
-    @include contentBody(min(100%, 1800px), 100%, auto, 0);
+body {
+  @include contentBody(min(100%, 1800px), 100%, auto, 0);
+  * {
+    margin: 0;
+    padding: 0;
+  }
+}
 
-    *{
-        margin: 0;
-        padding: 0;
+#check_air_main {
+  // @include color($background-color);
+  #search_div {
+    @include contentBody(90%, 60px, auto, 100px 0);
+    div {
+      @include contentBody(100%, 100%);
+      position: relative;
+      input {
+        @include contentBody(
+          calc(100% - 80px),
+          58px,
+          0,
+          0 0 0 10px,
+          1px,
+          solid,
+          black,
+          10px 0px 0px 10px
+        );
+        font-size: 28px;
+        position: absolute;
+        top: 0;
+      }
+      button {
+        @include contentBody(
+          60px,
+          60px,
+          0,
+          0,
+          1px,
+          solid,
+          black,
+          0px 10px 10px 0px
+        );
+        @include color($primary-color);
+        position: absolute;
+        top: 0;
+        right: 0;
+        img {
+          @include contentBody(80%, 80%, auto);
+        }
+      }
+      button:active {
+        background-color: $active-color;
+      }
     }
+  }
+}
+
+@media screen and (min-width: 601px) {
+  #check_air_main {
+    #search_div {
+      @include contentBody(70%, 60px, auto, 120px 0);
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #check_air_main {
+    #search_div {
+      @include contentBody(50%, 60px, auto, 120px 0);
+    }
+  }
 }

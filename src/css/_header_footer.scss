@@ -88,6 +88,7 @@ header {
     visibility: hidden;
     position: absolute;
     top: 160px;
+    z-index: 1;
     @include contentBody(100%, 120px);
     nav {
       @include contentBody(100%, 100%);

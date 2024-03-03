@@ -13,34 +13,108 @@
 
 <body>
     <header>
-        <div>
-            <a href="index.html" aria-label="tillbaks till startsida"><img src="pictures/projektLogo-svg.svg" alt=""></a>
-        </div>
+        <a href="index.html" aria-label="tillbaks till startsida" id="logo_link"><img src="pictures/projektLogo-svg.svg"
+                alt=""></a>
         <h1>
             Kolla Luften
         </h1>
         <nav>
             <ul>
-                <li><a href="index.html">Startsida</a></li>
-                <li><a href="check_air.html">Kolla Luften</a></li>
+                <li><a href="index.html"><span>Luftpollution</span></a></li>
+                <li><a href="check_air.html" class="currentSite"><span>Kolla Luften</span></a></li>
             </ul>
         </nav>
-        <button type="button" id="change_lang_btn" aria-expanded="false"><img src="pictures/earth-europe-solid.svg">Språk</button>
-        <div>
+
+        <button type="button" id="change_lang_btn" aria-expanded="false"><span>Språk</span><img
+                src="pictures/earth-europe-solid.svg"></button>
+        <div id="lang_dropdown">
             <button type="button" class="langBtn" aria-selected="true">Svenska</button>
             <button type="button" class="langBtn" aria-selected="false">Engelska</button>
         </div>
+
+
+        <button type="button" id="menu_btn" aria-label="öpnna navigationsmeny"><img
+                src="pictures/bars-solid.svg"></button>
+        <div id="mobile_menu" class="closed">
+            <nav>
+                <ul>
+                    <li class="menuLi"><a href="index.html"><span class="menuLiSpan">Luftpollution</span></a></li>
+                    <li class="menuLi"><a href="check_air.html"><span class="menuLiSpan">Kolla Luften</span></a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <main>
-        <h1></h1>
-        <label for="search">Sök Stad:</label>
+    <main id="check_air_main">
+        <div id="search_div">
+            <label for="search">Sök Palts:</label>
+            <div>
+                <input type="text" name="search" id="search">
+                <button type="button" id="serach_btn">
+                    <img src="pictures/magnifying-glass-location-solid.svg" alt="">
+                </button>
+            </div>
+        </div>
         <div>
-            <input type="text" name="search" id="search">
-            <button type="button">
-                <img src="pictures/magnifying-glass-location-solid.svg" alt="">
-            </button>
+            <p id="place_information"></p>
         </div>
     </main>
+    <section>
+        <h2></h2>
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
     <footer></footer>
 </body>
 
