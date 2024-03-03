@@ -44,6 +44,22 @@ async function getAIQstats() {
 }
 
 async function displayData(data) {
-    console.log("works");
     document.getElementById('place_information').innerHTML = `Plats: ${input.value.toUpperCase()}, generell AQI: ${data.overall_aqi}`;
+
+    let parentDiv = document.getElementById('place_information_div');
+    let dataArr = ["CO", "NO2", "O3", "SO2", "PM2.5", "PM10"];
+    let dataArrNamesSv = ["Kolmonoxid", "Kvävedioxid", "Ozon", "Svaveldioxid", "PM2.5 partiklar", "PM10 partiklar"];
+    let dataArrNamesEng = ["Carbon monoxide", "Nitrogen dioxide", "Ozone", "Sulphur dioxide", "PM2.5 particulates", "PM10 particulates"];
+
+    for (let index = 0; index < dataArr.length; index++) {
+        let p = document.createElement('p');
+        console.log(document.getElementsByClassName('langBtn')[0].style.backgroundColor);
+        if (document.getElementsByClassName('langBtn')[0].style.backgroundColor == "rgb(38, 110, 192)") {
+            p.innerHTML = `${dataArrNamesSv[index]} (${dataArr[index]}) AQI: ${data[dataArr[index]].aqi} <br> koncentration: ${data[dataArr[index]].concentration}`;
+        } else{
+            p.innerHTML = `${dataArrNamesEng[index]} (${dataArr[index]}) AQI: ${data[dataArr[index]].aqi} <br> concentration: ${data[dataArr[index]].concentration}`;
+        }
+        p.style.margin = "0px 0px 10px 5px";
+        parentDiv.appendChild(p);
+    }
 }
