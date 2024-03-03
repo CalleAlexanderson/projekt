@@ -47,6 +47,7 @@ body {
         position: absolute;
         top: 0;
         right: 0;
+        cursor: pointer;
         img {
           @include contentBody(80%, 80%, auto);
         }
@@ -55,6 +56,66 @@ body {
         background-color: $active-color;
       }
     }
+  }
+  #place_information {
+    @include contentBody(80%, auto, auto);
+    font-size: 1.4rem;
+  }
+  #place_information_div {
+    @include contentBody(80%, 420px, auto);
+    @include color($secondary-color, white);
+    * {
+      @include contentBody(100%, 40px, 0, 15px 10px);
+    }
+  }
+}
+
+section {
+  @include contentBody(95%, auto, 20px auto);
+  h2 {
+    margin-bottom: 20px;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    thead {
+      @include color($active-color, white);
+      tr {
+        border: 1px solid $active-color;
+      }
+    }
+    tbody{
+      #green{
+        @include color(green);
+      }
+      #yellow{
+        @include color(yellow);
+      }
+      #orange{
+        @include color(orange);
+      }
+      #red{
+        @include color(red);
+      }
+      #purple{
+        @include color(purple);
+        color: white;
+      }
+      #maroon{
+        @include color(maroon);
+        color: white;
+      }
+    }
+    tr {
+      td {
+        border: 1px solid black;
+        padding: 8px;
+        font-weight: bold;
+      }
+    }
+  }
+  p{
+    margin-top: 10px;
   }
 }
 

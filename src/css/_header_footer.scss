@@ -40,6 +40,7 @@ header {
     position: absolute;
     left: 10px;
     top: 90px;
+    cursor: pointer;
     span {
       visibility: hidden;
       position: absolute;
@@ -63,6 +64,7 @@ header {
     display: flex;
     flex-direction: column;
     > * {
+      cursor: pointer;
       @include contentBody(60px, 60px, 0, 0, 0px 1px 1px, solid, black);
     }
   }
@@ -127,8 +129,9 @@ header {
 
 footer {
   @include contentBody(min(100%, 1800px), auto);
-  position: absolute;
+  position: sticky;
   bottom: 0;
+  @include color(white);
   > * {
     padding: 2px 5px !important;
   }

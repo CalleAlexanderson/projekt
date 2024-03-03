@@ -46,7 +46,7 @@
     </header>
     <main id="check_air_main">
         <div id="search_div">
-            <label for="search">Sök Palts:</label>
+            <label for="search">Sök Plats:</label>
             <div>
                 <input type="text" name="search" id="search">
                 <button type="button" id="serach_btn">
@@ -55,70 +55,70 @@
             </div>
         </div>
         <div>
-            <p id="place_information"></p>
+            <p id="place_information">Plats: ?, generell AQI: ?</p>
             <div id="place_information_div">
 
             </div>
         </div>
     </main>
     <section>
-        <h2></h2>
+        <h2>Tabell på olika nivår av pollution</h2>
         <table>
             <thead>
                 <tr>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
+                    <th>Daily AQI Color</th>
+                    <th>Levels of Concern</th>
+                    <th>Values of Index</th>
+                    <th>Description of Air Quality</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                <tr id="green">
+                    <td>Green</td>
+                    <td>Good</td>
+                    <td>0 to 50</td>
+                    <td>Air quality is satisfactory, and air pollution poses little or no risk.</td>
+                    
                 </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                <tr id="yellow">
+                    <td>Yellow</td>
+                    <td>Moderate</td>
+                    <td>51 to 100</td>
+                    <td>Air quality is acceptable. However, there may be a risk for some people, particularly those who are unusually sensitive to air pollution.</td>
                 </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                <tr id="orange">
+                    <td>Orange</td>
+                    <td>Unhealthy for Sensitive Groups</td>
+                    <td>101 to 150</td>
+                    <td>Members of sensitive groups may experience health effects. The general public is less likely to be affected.</td>
                 </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                <tr id="red">
+                    <td>Red</td>
+                    <td>Unhealthy</td>
+                    <td>151 to 200</td>
+                    <td>Some members of the general public may experience health effects; members of sensitive groups may experience more serious health effects.</td>
                 </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                <tr id="purple">
+                    <td>Purple</td>
+                    <td>Very Unhealthy</td>
+                    <td>201 to 300</td>
+                    <td>Health alert: The risk of health effects is increased for everyone.</td>
                 </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                <tr id="maroon">
+                    <td>Maroon</td>
+                    <td>Hazardous</td>
+                    <td>301 and higher</td>
+                    <td>Health warning of emergency conditions: everyone is more likely to be affected.</td>
                 </tr>
             </tbody>
         </table>
+        <p>Tabell tagen från denna källa: <a href="https://www.airnow.gov/aqi/aqi-basics/">Air Quality Index (AQI) Basics</a></p>
     </section>
-    <footer></footer>
+    <footer>
+        <p>Sidskapare: Calle Alexanderson</p>
+        <p>kontakta mig här:<a href="mailto:calle.alexanderson@telia.com">calle.alexanderson@telia.com</a></p>
+        <p>Data tagen från denna källa: <a href="https://api-ninjas.com/api/airquality">Air Quality API</a></p>
+    </footer>
 </body>
 
 </html>

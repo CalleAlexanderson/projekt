@@ -47,6 +47,7 @@ async function displayData(data) {
     document.getElementById('place_information').innerHTML = `Plats: ${input.value.toUpperCase()}, generell AQI: ${data.overall_aqi}`;
 
     let parentDiv = document.getElementById('place_information_div');
+    parentDiv.innerHTML = "";
     let dataArr = ["CO", "NO2", "O3", "SO2", "PM2.5", "PM10"];
     let dataArrNamesSv = ["Kolmonoxid", "Kvävedioxid", "Ozon", "Svaveldioxid", "PM2.5 partiklar", "PM10 partiklar"];
     let dataArrNamesEng = ["Carbon monoxide", "Nitrogen dioxide", "Ozone", "Sulphur dioxide", "PM2.5 particulates", "PM10 particulates"];
@@ -59,7 +60,6 @@ async function displayData(data) {
         } else{
             p.innerHTML = `${dataArrNamesEng[index]} (${dataArr[index]}) AQI: ${data[dataArr[index]].aqi} <br> concentration: ${data[dataArr[index]].concentration}`;
         }
-        p.style.margin = "0px 0px 10px 5px";
         parentDiv.appendChild(p);
     }
 }
