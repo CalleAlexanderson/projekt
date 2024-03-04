@@ -15,6 +15,8 @@ header {
 
   h1 {
     position: absolute;
+    text-align: center;
+    min-width: 200px;
     top: 50%;
     left: calc(50% + 60px);
     transform: translate(-50%, -50%);
@@ -62,6 +64,7 @@ header {
     left: 10px;
     top: 150px;
     display: flex;
+    z-index: 1;
     flex-direction: column;
     > * {
       cursor: pointer;
@@ -100,7 +103,7 @@ header {
           position: absolute;
           @include contentBody(0, 50%);
           @include listStyle();
-          background-color: $background-color;
+          background-color: $primary-color;
           a {
             display: block;
             @include contentBody(100%, 100%);

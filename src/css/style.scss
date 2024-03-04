@@ -10,8 +10,19 @@ body {
   }
 }
 
-#index_main{
+#index_main {
   @include color($background-color);
+
+  > * {
+    @include contentBody(75%, auto, auto, 20px);
+    line-height: 1.3rem;
+    p {
+      margin-top: 10px;
+    }
+  }
+  #main_div1 {
+    padding-top: 80px;
+  }
 }
 
 #check_air_main {
@@ -68,8 +79,17 @@ body {
   #place_information_div {
     @include contentBody(80%, 420px, auto);
     @include color($secondary-color, white);
+    position: relative;
     * {
       @include contentBody(100%, 40px, 0, 15px 10px);
+    }
+    #loading {
+      @include contentBody(auto, 50%, auto);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      visibility: hidden;
     }
   }
 }
@@ -89,24 +109,24 @@ section {
         border: 1px solid $active-color;
       }
     }
-    tbody{
-      #green{
+    tbody {
+      #green {
         @include color(green);
       }
-      #yellow{
+      #yellow {
         @include color(yellow);
       }
-      #orange{
+      #orange {
         @include color(orange);
       }
-      #red{
+      #red {
         @include color(red);
       }
-      #purple{
+      #purple {
         @include color(purple);
         color: white;
       }
-      #maroon{
+      #maroon {
         @include color(maroon);
         color: white;
       }
@@ -119,7 +139,7 @@ section {
       }
     }
   }
-  p{
+  p {
     margin-top: 10px;
   }
 }
@@ -130,12 +150,26 @@ section {
       @include contentBody(70%, 60px, auto, 120px 0);
     }
   }
+  #index_main {
+    > * {
+      width: 35%;
+      
+    }
+    #main_div1 {
+      padding-top: 20px;
+    }
+  }
 }
 
 @media screen and (min-width: 1024px) {
   #check_air_main {
     #search_div {
       @include contentBody(50%, 60px, auto, 120px 0);
+    }
+  }
+  #index_main {
+    > * {
+      width: 30%;
     }
   }
 }
