@@ -1,9 +1,10 @@
 // Globala konstanter och variabler
-let input;
+
+//netlify gillar inte när jag använder globala variabler i fler än en js fil så jag tar bort de
+
 // --------------------------------------------------
 // Initiera globala variabler och händelsehanterare
 function init() {
-    input = document.getElementById('search');
     document.getElementById('serach_btn').addEventListener('click', getAIQstats);
     document.getElementById('loading').style.visibility = "hidden";
 } // Slut init
@@ -12,7 +13,7 @@ window.addEventListener('load', init);
 
 async function getAIQstats() {
     document.getElementById('loading').style.visibility = "visible";
-    let inputValue = input.value;
+    let inputValue = document.getElementById('search').value;
     let inputForFetch = inputValue.replace(/\s/g, '+')
 
     if (inputForFetch != "") {
@@ -48,7 +49,7 @@ async function getAIQstats() {
 }
 
 async function displayData(data) {
-    document.getElementById('place_information').innerHTML = `Plats: ${input.value.toUpperCase()}, generell AQI: ${data.overall_aqi}`;
+    document.getElementById('place_information').innerHTML = `Plats: ${document.getElementById('search').value.toUpperCase()}, generell AQI: ${data.overall_aqi}`;
     document.getElementById('loading').style.visibility = "hidden";
 
     let parentDiv = document.getElementById('place_information_div');
