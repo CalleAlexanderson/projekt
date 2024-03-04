@@ -20,12 +20,12 @@
         </h1>
         <nav>
             <ul>
-                <li><a href="index.html"><span>Luftpollution</span></a></li>
-                <li><a href="check_air.html" class="currentSite"><span>Kolla Luften</span></a></li>
+                <li><a href="index.html"><span class="menuSpan">Luftpollution</span></a></li>
+                <li><a href="check_air.html" class="currentSite"><span class="menuSpan">Kolla Luften</span></a></li>
             </ul>
         </nav>
 
-        <button type="button" id="change_lang_btn" aria-expanded="false"><span>Språk</span><img
+        <button type="button" id="change_lang_btn" aria-expanded="false"><span id="lang_btn_span">Språk</span><img
                 src="pictures/earth-europe-solid.svg"></button>
         <div id="lang_dropdown">
             <button type="button" class="langBtn" aria-selected="true">Svenska</button>
@@ -38,8 +38,8 @@
         <div id="mobile_menu" class="closed">
             <nav>
                 <ul>
-                    <li class="menuLi"><a href="index.html"><span class="menuLiSpan">Luftpollution</span></a></li>
-                    <li class="menuLi"><a href="check_air.html"><span class="menuLiSpan">Kolla Luften</span></a></li>
+                    <li class="menuLi"><a href="index.html"><span class="menuLiSpan menuSpan">Luftpollution</span></a></li>
+                    <li class="menuLi"><a href="check_air.html"><span class="menuLiSpan menuSpan">Kolla Luften</span></a></li>
                 </ul>
             </nav>
         </div>
@@ -62,7 +62,7 @@
         </div>
     </main>
     <section>
-        <h2>Tabell på olika nivår av pollution</h2>
+        <h2>Tabell på olika nivåer av pollution</h2>
         <table>
             <thead>
                 <tr>
@@ -112,12 +112,12 @@
                 </tr>
             </tbody>
         </table>
-        <p>Tabell tagen från denna källa: <a href="https://www.airnow.gov/aqi/aqi-basics/" target="_blank">Air Quality Index (AQI) Basics</a></p>
+        <p id="table_source">Tabell tagen från denna källa: <a href="https://www.airnow.gov/aqi/aqi-basics/" target="_blank">Air Quality Index (AQI) Basics</a></p>
     </section>
     <footer>
-        <p>Sidskapare: Calle Alexanderson</p>
-        <p>kontakta mig här:<a href="mailto:calle.alexanderson@telia.com">calle.alexanderson@telia.com</a></p>
-        <p>Data tagen från denna källa: <a href="https://api-ninjas.com/api/airquality">Air Quality API</a></p>
+        <p class="footerP">Sidskapare: Calle Alexanderson</p>
+        <p class="footerP">Kontakta mig här: <a href="mailto:calle.alexanderson@telia.com">calle.alexanderson@telia.com</a></p>
+        <p class="footerP">Data tagen från denna källa: <a href="https://api-ninjas.com/api/airquality">Air Quality API</a></p>
     </footer>
 </body>
 
