@@ -54,6 +54,14 @@ function makeLangSwedish() {
 
             default: //Index
                 console.log(docTitle);
+                let mainArt1Txt = "<h3>Luftpollution, vad är det?</h3><p>Luftpollution är en term som används för att refera till kemikalier och partiklar som är skadliga för hälsan av människor, djur och växtliv. Luftpollution finns i flera olika former, det kan förekomma i gas form, fast form (som fast partiklar) eller flytande form (som droppar).</p>";
+                let mainArt2Txt = "<h3>Hur skapas luftpollution?</h3> <p>Luftpollution hamnar i vår atmosfär på olika sätt. För det mest förekommer luftpollution som en produkt skapad av människor i formen av utsläpp från till exempel fabriker, bilar och flyplan. Dessa utsläpp orsakade av människor heter antropogena pollution. Vissa typer av luftpollution sker naturligt som rök från skogsbränder och aska från vulkanutbrott, dessa kallas naturlig pollution. Luftpollution är vanligast i storstäder där olika typer av utsläpp förekommer på samma plats. Ibland kan berg eller höga byggnader hindra dessa utsläpp från att sprida sig vilket leder till att det samlas i luften i form av ett moln som kallas smog.</p>";
+                let mainArt3Txt = "";
+                let mainArt4Txt = "";
+                document.getElementById('main_art1').innerHTML = mainArt1Txt;
+                document.getElementById('main_art2').innerHTML = mainArt2Txt;
+                document.getElementById('main_art3').innerHTML = mainArt3Txt;
+                document.getElementById('main_art4').innerHTML = mainArt4Txt;
                 break;
         }
     }
@@ -76,6 +84,14 @@ function makeLangEnglish() {
 
             default: //Index
                 console.log(docTitle);
+                let mainArt1Txt = "<h3>What is air pollution?</h3><p>Air pollution is a term that refers to chemicals and particles in the air that causes harm to humans, animals and plants. Pollutants in the air take many forms, they can be gases, solids (as solid particles), or liquids (as droplets).</p>";
+                let mainArt2Txt = "<h3>What causes air pollution?</h3><p>Pollution enters the Earth's atmosphere in many different ways. Most air pollution is created by people, in the form of emissions from for example, factories, cars, planes. These man-made sources of pollution are called anthropogenic emissions. Some types of air pollution occur naturally, such as smoke from wildfires or ash from volcanoes. These are called natural sources. Air pollution is most common in large cities where emissions from many different sources are concentrated. Sometimes, mountains or tall buildings prevent air pollution from spreading out, this air pollution often appears as a cloud making the air murky and is called smog.</p>";
+                let mainArt3Txt = "";
+                let mainArt4Txt = "";
+                document.getElementById('main_art1').innerHTML = mainArt1Txt;
+                document.getElementById('main_art2').innerHTML = mainArt2Txt;
+                document.getElementById('main_art3').innerHTML = mainArt3Txt;
+                document.getElementById('main_art4').innerHTML = mainArt4Txt;
                 break;
         }
     }

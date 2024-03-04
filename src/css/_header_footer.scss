@@ -240,13 +240,17 @@ footer {
 }
 
 @media screen and (min-width: 1804px) {
+  body{
+    border-width: 0px 2px 0px 2px !important;
+    border-color: $active-color !important;
+  }
   header {
-    border-width: 0px 2px 2px 2px;
+    border-bottom: 2px;
     border-color: $active-color;
     border-style: solid;
   }
   footer {
-    border-width: 2px 2px 0 2px;
+    border-top: 2px;
     border-color: $active-color;
     border-style: solid;
   }

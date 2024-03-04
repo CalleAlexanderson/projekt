@@ -10,8 +10,12 @@ body {
   }
 }
 
+#index_main{
+  @include color($background-color);
+}
+
 #check_air_main {
-  // @include color($background-color);
+  @include color($background-color);
   #search_div {
     @include contentBody(90%, 60px, auto, 100px 0);
     div {
@@ -71,7 +75,8 @@ body {
 }
 
 section {
-  @include contentBody(95%, auto, 20px auto);
+  @include contentBody(95%, auto, 0, 20px 2.5%);
+  @include color($background-color);
   h2 {
     margin-bottom: 20px;
   }
