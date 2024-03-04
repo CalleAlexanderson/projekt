@@ -49,7 +49,6 @@ function dropDown() {
 }
 
 function makeLangSwedish() {
-    let docTitle = document.title;
 
     if (lang != "sv") {
         lang = "sv";
@@ -58,7 +57,7 @@ function makeLangSwedish() {
         swedishBtn.style.color = "#FFFFFF";
         englishBtn.style.backgroundColor = "#FFFFFF";
         englishBtn.style.color = "#000000";
-        switch (docTitle) {
+        switch (document.title) {
             case "Check The Air":
                 //head och header
                 document.getElementsByTagName('h1')[0].innerHTML = "Kolla Luften";
@@ -120,7 +119,6 @@ function makeLangSwedish() {
 }
 
 function makeLangEnglish() {
-    let docTitle = document.title;
 
     if (lang != "en") {
         lang = "en";
@@ -129,7 +127,7 @@ function makeLangEnglish() {
         englishBtn.style.color = "#FFFFFF";
         swedishBtn.style.backgroundColor = "#FFFFFF";
         swedishBtn.style.color = "#000000";
-        switch (docTitle) {
+        switch (document.title) {
             case "Kolla Luften":
                 //head och header
                 document.getElementsByTagName('h1')[0].innerHTML = "Check The Air";
