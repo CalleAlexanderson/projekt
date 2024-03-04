@@ -1,34 +1,115 @@
 <!DOCTYPE html>
 <html lang="sv">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/lang.js" defer></script>
-    <title>Startsida</title>
+    <script src="js/misc.js" defer></script>
+    <link rel="stylesheet" href="css/style.scss">
+    <title>Luftförorening</title>
 </head>
+
 <body>
     <header>
-        <div>
-            <a href="index.html" aria-label="tillbaks till startsida"><img src="pictures/placeholder logo.svg" alt=""></a>
-        </div>
+        <a href="index.html" aria-label="tillbaks till startsida" id="logo_link"><img src="pictures/projektLogo-svg.svg"
+                alt=""></a>
         <h1>
-            Restaurant Finder
+            Luftförorening
         </h1>
         <nav>
             <ul>
-                <li><a href="index.html">Startsida</a></li>
-                <li><a href="restaurant_finder.html">Resturang Hittaren</a></li>
+                <li><a href="index.html" class="currentSite"><span class="menuSpan">Luftförorening</span></a></li>
+                <li><a href="check_air.html"><span class="menuSpan">Kolla Luften</span></a></li>
             </ul>
         </nav>
-        <button type="button" id="change_lang_btn" aria-expanded="false"><img src="pictures/earth-europe-solid.svg">Språk</button>
-        <div>
+
+        <button type="button" id="change_lang_btn" aria-expanded="false"><span id="lang_btn_span">Språk</span><img
+                src="pictures/earth-europe-solid.svg"></button>
+        <div id="lang_dropdown">
             <button type="button" class="langBtn" aria-selected="true">Svenska</button>
             <button type="button" class="langBtn" aria-selected="false">Engelska</button>
         </div>
+
+
+        <button type="button" id="menu_btn" aria-label="öpnna navigationsmeny"><img
+                src="pictures/bars-solid.svg"></button>
+        <div id="mobile_menu" class="closed">
+            <nav>
+                <ul>
+                    <li class="menuLi"><a href="index.html"><span class="menuLiSpan menuSpan">Luftförorening</span></a></li>
+                    <li class="menuLi"><a href="check_air.html"><span class="menuLiSpan menuSpan">Kolla Luften</span></a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <main>
-        <h1></h1>
+    <main id="index_main">
+        <div id="main_div1">
+            <h2>Luftförorening: en långsam mördare</h2>
+            <p>Du har säkert tidigare sett någon artikel eller hört någon konversation om faran med Luftförorening och
+                hur
+                dåligt det är både för oss och vår planet, men vad är det man pratar om egentligen?
+            </p>
+        </div>
+        <article id="main_art1">
+            <h3>Luftförorening, vad är det?</h3>
+            <p>Luftförorening är en term som används för att refera till kemikalier och partiklar som är skadliga för
+                hälsan av människor, djur och växtliv. Luftförorening finns i flera olika former, det kan förekomma i
+                gas
+                form,
+                fast form (som fast partiklar) eller flytande form (som droppar).</p>
+        </article>
+        <article id="main_art2">
+            <h3>Hur skapas Luftförorening?</h3>
+            <p>Luftförorening hamnar i vår atmosfär på olika sätt. För det mest förekommer Luftförorening som en
+                produkt
+                skapad av människor i formen av utsläpp från till exempel fabriker, bilar och flyplan. Dessa utsläpp
+                orsakade av människor heter antropogena pollution. <br> <br> Vissa typer av Luftförorening sker naturligt som
+                rök
+                från skogsbränder och aska från vulkanutbrott, dessa kallas naturlig pollution. Luftförorening är
+                vanligast i storstäder där olika typer av utsläpp förekommer på samma plats. Ibland kan berg eller höga
+                byggnader hindra dessa utsläpp
+                från att sprida sig vilket leder till att det samlas i luften i form av ett moln som kallas smog.
+            </p>
+        </article>
+        <article id="main_art3">
+            <h3>Negativa hälsoeffekter av Luftförorening</h3>
+            <p>
+                Negativa hälsoeffekter förekommer i både kortsiktiga och långsiktiga effekter. <br> <br>kortsiktiga
+                effekter inkluderar sjukdomar som Lunginflammation och Bronkit samt irritation i näsa, hals, ögon eller
+                hud. Luftförorening kan också orsaka huvudvärk, yrsel och illamående. <br> <br> Långsiktiga effekter
+                inkulderar hjärtsjukdomar, lungcancer och luftvägssjukdomar som emfysem samt långsiktiga skador på
+                nerver, hjärna, njurar, lever och andra organ. <br> <br> Människor vars immunförsvar tenderar att vara
+                svagare är ofta känsligare för föroreningar. Tillstånd som astma, hjärtsjukdomar och lungsjukdomar kan
+                förvärras av exponering för Luftförorening.
+            </p>
+        </article>
+        <article id="main_art4">
+            <h3>Hur mäts Luftförorening?</h3>
+            <p>Denna hemsida måter Luftförorening med U.S. Environmental Protection Agency index för
+                Luftförorening(AQI). <br> Tänk på AQI som en måttstock som går från 0 till 500. Ju högre AQI-värde,
+                desto högre nivå av
+                Luftförorening och desto större hälsorisk. Till exempel representerar ett AQI-värde på 50 eller lägre
+                god luftkvalitet, medan ett AQI-värde över 300 representerar farlig luftkvalitet. <br> <br>
+
+                För varje förorening
+                motsvarar ett AQI-värde på 100 i allmänhet en koncentration i luften som är lika med nivån för den
+                kortsiktiga nationella luftkvalitetsnormen för skydd av folkhälsan. AQI-värden på eller under 100 anses
+                i allmänhet vara tillfredsställande. När AQI-värdena är över 100 är luftkvaliteten ohälsosam: först för
+                vissa känsliga grupper av människor, sedan för alla när AQI-värdena blir högre. <br> <br>
+
+                AQI är indelat i sex
+                kategorier. Varje kategori motsvarar olika nivåer av hälsoproblem. Varje kategori har också en specifik
+                färg. Färgen gör det enkelt för människor att snabbt avgöra om luftkvaliteten når ohälsosamma nivåer i
+                deras samhällen.
+            </p>
+        </article>
     </main>
-    <footer></footer>
+    <footer>
+        <p class="footerP">Sidskapare: Calle Alexanderson</p>
+        <p class="footerP">Kontakta mig här: <a href="mailto:calle.alexanderson@telia.com">calle.alexanderson@telia.com</a></p>
+        <p class="footerP">Data tagen från denna källa: <a href="https://api-ninjas.com/api/airquality">Air Quality API</a></p>
+    </footer>
 </body>
+
 </html>

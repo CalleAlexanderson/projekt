@@ -1,0 +1,37 @@
+$background-color: #ebebeb;
+$primary-color: #FFFFFF;
+$secondary-color: #231818;
+$hover-color: #6A9EDA; 
+$active-color: #266EC0;
+@use 'sass:color';
+
+@mixin contentBody($w, $h, $m: 0, $p: 0, $b: 0, $bS: solid, $borC: #000000, $br: 0) {
+  width: $w;
+  height: $h;
+  margin: $m;
+  padding: $p;
+  border-width: $b;
+  border-style: $bS;
+  border-color: $borC;
+  border-radius: $br;
+}
+
+@mixin color($bC, $txtC: #000000) {
+  background-color: $bC;
+  color: $txtC;
+}
+
+@mixin listStyle($lS: none) {
+  list-style: $lS;
+}
+
+@mixin linkStyle($txtC, $txtD) {
+  color: $txtC;
+  text-decoration: $txtD;
+}
+
+@mixin buttonStyle($w, $h, $m: 0, $p: 0, $b: 0, $bS: solid, $borC: #000000, $br: 0, $bC: $primary-color, $txtC: #000000) {
+  @include contentBody($w, $h, $m, $p, $b, $bS, $borC, $br);
+  background-color: $bC;
+  color: $txtC;
+}

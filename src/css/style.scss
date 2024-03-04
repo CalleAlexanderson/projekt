@@ -1,0 +1,175 @@
+@import "mixins_colors";
+@import "header_footer";
+@import "animations";
+
+body {
+  @include contentBody(min(100%, 1800px), 100%, auto, 0);
+  * {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+#index_main {
+  @include color($background-color);
+
+  > * {
+    @include contentBody(75%, auto, auto, 20px);
+    line-height: 1.3rem;
+    p {
+      margin-top: 10px;
+    }
+  }
+  #main_div1 {
+    padding-top: 80px;
+  }
+}
+
+#check_air_main {
+  @include color($background-color);
+  #search_div {
+    @include contentBody(90%, 60px, auto, 100px 0);
+    div {
+      @include contentBody(100%, 100%);
+      position: relative;
+      input {
+        @include contentBody(
+          calc(100% - 80px),
+          58px,
+          0,
+          0 0 0 10px,
+          1px,
+          solid,
+          black,
+          10px 0px 0px 10px
+        );
+        font-size: 28px;
+        position: absolute;
+        top: 0;
+      }
+      button {
+        @include contentBody(
+          60px,
+          60px,
+          0,
+          0,
+          1px,
+          solid,
+          black,
+          0px 10px 10px 0px
+        );
+        @include color($primary-color);
+        position: absolute;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+        img {
+          @include contentBody(80%, 80%, auto);
+        }
+      }
+      button:active {
+        background-color: $active-color;
+      }
+    }
+  }
+  #place_information {
+    @include contentBody(80%, auto, auto);
+    font-size: 1.4rem;
+  }
+  #place_information_div {
+    @include contentBody(80%, 420px, auto);
+    @include color($secondary-color, white);
+    position: relative;
+    * {
+      @include contentBody(100%, 40px, 0, 15px 10px);
+    }
+    #loading {
+      @include contentBody(auto, 50%, auto);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      visibility: hidden;
+    }
+  }
+}
+
+section {
+  @include contentBody(95%, auto, 0, 20px 2.5%);
+  @include color($background-color);
+  h2 {
+    margin-bottom: 20px;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    thead {
+      @include color($active-color, white);
+      tr {
+        border: 1px solid $active-color;
+      }
+    }
+    tbody {
+      #green {
+        @include color(green);
+      }
+      #yellow {
+        @include color(yellow);
+      }
+      #orange {
+        @include color(orange);
+      }
+      #red {
+        @include color(red);
+      }
+      #purple {
+        @include color(purple);
+        color: white;
+      }
+      #maroon {
+        @include color(maroon);
+        color: white;
+      }
+    }
+    tr {
+      td {
+        border: 1px solid black;
+        padding: 8px;
+        font-weight: bold;
+      }
+    }
+  }
+  p {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  #check_air_main {
+    #search_div {
+      @include contentBody(70%, 60px, auto, 120px 0);
+    }
+  }
+  #index_main {
+    > * {
+      width: 35%;
+      
+    }
+    #main_div1 {
+      padding-top: 20px;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #check_air_main {
+    #search_div {
+      @include contentBody(50%, 60px, auto, 120px 0);
+    }
+  }
+  #index_main {
+    > * {
+      width: 30%;
+    }
+  }
+}

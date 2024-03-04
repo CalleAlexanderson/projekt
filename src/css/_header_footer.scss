@@ -1,0 +1,260 @@
+@import "mixins_colors";
+
+header {
+  @include contentBody(100%, 80px);
+  position: relative;
+  border-bottom: 2px solid $active-color;
+
+  #logo_link {
+    @include contentBody(120px, 100%);
+    display: block;
+    img {
+      @include contentBody(auto, 100%);
+    }
+  }
+
+  h1 {
+    position: absolute;
+    text-align: center;
+    min-width: 200px;
+    top: 50%;
+    left: calc(50% + 60px);
+    transform: translate(-50%, -50%);
+  }
+
+  li {
+    position: relative;
+    span {
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+  }
+
+  > nav {
+    visibility: hidden;
+  }
+
+  #change_lang_btn {
+    @include buttonStyle(60px, 60px, 0, 0, 1px, solid, black, 10px);
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    left: 10px;
+    top: 90px;
+    cursor: pointer;
+    span {
+      visibility: hidden;
+      position: absolute;
+    }
+    img {
+      @include contentBody(40px, 40px, auto);
+    }
+  }
+  #change_lang_btn:hover {
+    background-color: $hover-color;
+  }
+  #change_lang_btn:active {
+    background-color: $active-color;
+  }
+
+  #lang_dropdown {
+    visibility: hidden;
+    position: absolute;
+    left: 10px;
+    top: 150px;
+    display: flex;
+    z-index: 1;
+    flex-direction: column;
+    > * {
+      cursor: pointer;
+      @include contentBody(60px, 60px, 0, 0, 0px 1px 1px, solid, black);
+    }
+  }
+
+  #menu_btn {
+    @include buttonStyle(60px, 60px, 0, 0, 1px, solid, black, 10px);
+    position: absolute;
+    right: 10px;
+    top: 90px;
+    img {
+      @include contentBody(100%, 100%);
+    }
+  }
+
+  #menu_btn:hover {
+    background-color: $hover-color;
+  }
+  #menu_btn:active {
+    background-color: $active-color;
+  }
+
+  #mobile_menu {
+    visibility: hidden;
+    position: absolute;
+    top: 160px;
+    z-index: 1;
+    @include contentBody(100%, 120px);
+    nav {
+      @include contentBody(100%, 100%);
+      ul {
+        @include contentBody(100%, 100%);
+        li {
+          position: absolute;
+          @include contentBody(0, 50%);
+          @include listStyle();
+          background-color: $primary-color;
+          a {
+            display: block;
+            @include contentBody(100%, 100%);
+            span {
+              @include linkStyle(#000000, underline);
+              right: 50%;
+              transform: translate(0, -50%);
+              opacity: 0;
+            }
+          }
+          a:hover {
+            background-color: $hover-color;
+          }
+          a:active {
+            background-color: $active-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+.currentSite {
+  border: 2px solid black;
+}
+
+footer {
+  @include contentBody(min(100%, 1800px), auto);
+  position: sticky;
+  bottom: 0;
+  @include color(white);
+  > * {
+    padding: 2px 5px !important;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  header {
+    h1 {
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    #change_lang_btn {
+      top: 10px;
+      right: 80px;
+      left: initial;
+    }
+    #lang_dropdown {
+      right: 80px;
+      left: initial;
+      top: 70px;
+    }
+    #menu_btn {
+      top: 10px;
+    }
+    #mobile_menu {
+      top: 90px;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #menu_btn {
+    visibility: hidden;
+  }
+  header {
+    h1 {
+      left: 40%;
+    }
+    > nav {
+      visibility: visible;
+      position: absolute;
+      top: 50%;
+      left: 55%;
+      transform: translate(0, -50%);
+      ul {
+        display: flex;
+        flex-direction: row;
+        li {
+          @include contentBody(
+            140px,
+            60px,
+            0 0 0 30px,
+            0,
+            0,
+            none,
+            black,
+            20px
+          );
+          @include listStyle();
+          a {
+            @include color($background-color, black);
+            @include contentBody(100%, 100%, 0, 0, 0, none, black, 20px);
+            display: block;
+            transition: background-color 0.25s;
+            span {
+              @include contentBody(100%, auto);
+              text-align: center;
+              text-decoration: underline;
+              font-size: 1.2rem;
+            }
+          }
+        }
+        a:hover {
+          background-color: $hover-color;
+        }
+        a:active {
+          background-color: $active-color;
+        }
+      }
+    }
+    #change_lang_btn {
+      width: 110px;
+      right: 10px;
+      transition: background-color 0.25s;
+      span {
+        visibility: visible;
+        top: 29px;
+        font-size: 1.3rem;
+        transform: translate(0, -50%);
+        padding-left: 2px;
+      }
+      img {
+        margin-left: 60px;
+      }
+    }
+
+    #lang_dropdown {
+      right: 10px;
+      top: 70px;
+      > * {
+        @include contentBody(110px, 60px, 0, 0, 0px 1px 1px, solid, black);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1804px) {
+  body{
+    border-width: 0px 2px 0px 2px !important;
+    border-color: $active-color !important;
+  }
+  header {
+    border-bottom: 2px;
+    border-color: $active-color;
+    border-style: solid;
+  }
+  footer {
+    border-top: 2px;
+    border-color: $active-color;
+    border-style: solid;
+  }
+}

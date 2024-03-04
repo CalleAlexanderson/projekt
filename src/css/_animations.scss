@@ -1,0 +1,145 @@
+.mobileMenuAnimOpen {
+  animation: openMenu600 1s ease-out;
+  animation-fill-mode: forwards;
+}
+
+.mobileMenuAnimClose {
+  animation: closeMenu600 1s ease-in;
+  animation-fill-mode: forwards;
+}
+
+.mobileMenuAnimOpenSpan {
+  animation: openMenuSpan600 1s ease-out;
+  animation-fill-mode: forwards;
+}
+
+.mobileMenuAnimCloseSpan {
+  animation: closeMenuSpan600 1s ease-in;
+  animation-fill-mode: forwards;
+}
+
+@media screen and (min-width: 601px) {
+  .mobileMenuAnimOpen {
+    animation: openMenu1024 1s ease-out;
+    animation-fill-mode: forwards;
+  }
+
+  .mobileMenuAnimClose {
+    animation: closeMenu1024 1s ease-in;
+    animation-fill-mode: forwards;
+  }
+
+  .mobileMenuAnimOpenSpan {
+    animation: openMenuSpan1024 1s ease-out;
+    animation-fill-mode: forwards;
+  }
+
+  .mobileMenuAnimCloseSpan {
+    animation: closeMenuSpan1024 1s ease-in;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes openMenu600 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes closeMenu600 {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+
+@keyframes openMenuSpan600 {
+  0% {
+    opacity: 0;
+    transform: translate(0, -50%);
+  }
+  35% {
+    opacity: 0;
+  }
+  36% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translate(50%, -50%);
+  }
+}
+
+@keyframes closeMenuSpan600 {
+  0% {
+    opacity: 1;
+    transform: translate(50%, -50%);
+  }
+  60% {
+    opacity: 1;
+  }
+  61% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0, -50%);
+  }
+}
+
+@keyframes openMenu1024 {
+    0%{
+      width: 0%;
+    }
+    100%{
+      width: 300px;
+    }
+  }
+  
+  @keyframes closeMenu1024{
+    0%{
+      width: 300px;
+    }
+    100%{
+      width: 0%;
+    }
+  }
+  
+  @keyframes openMenuSpan1024 {
+    0%{
+      opacity: 0;
+      transform: translate(0, -50%);
+    }
+    45%{
+      opacity: 0;
+    }
+    46%{
+      opacity: 1;
+    }
+    100%{
+      opacity: 1;
+      transform: translate(50%, -50%);
+    }
+  }
+  
+  @keyframes closeMenuSpan1024 {
+    0%{
+      opacity: 1;
+      transform: translate(50%, -50%);
+    }
+    55%{
+      opacity: 1;
+    }
+    56%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 0;
+      transform: translate(0, -50%);
+    }
+  }
