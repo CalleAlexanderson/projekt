@@ -4,11 +4,11 @@
 
 // --------------------------------------------------
 // Initiera globala variabler och händelsehanterare
-function init() {
+function init1() {
     document.getElementById('serach_btn').addEventListener('click', getAIQstats);
     document.getElementById('loading').style.visibility = "hidden";
 } // Slut init
-window.addEventListener('load', init);
+window.addEventListener('load', init1);
 // --------------------------------------------------
 
 async function getAIQstats() {

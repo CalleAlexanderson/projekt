@@ -4,7 +4,7 @@
 
 // --------------------------------------------------
 // Initiera globala variabler och händelsehanterare
-function init() {
+function init2() {
     document.getElementById('menu_btn').addEventListener('click', mobileMenu);
 
     window.addEventListener('resize', () => {
@@ -27,7 +27,7 @@ function init() {
         document.getElementsByClassName('menuLi')[index].style.top = index*60+"px";
     }
 } // Slut init
-window.addEventListener('load', init);
+window.addEventListener('load', init2);
 // --------------------------------------------------
 
 async function mobileMenu() {
