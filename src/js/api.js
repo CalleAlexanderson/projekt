@@ -2,6 +2,7 @@
 
 //netlify gillar inte när jag använder globala variabler i fler än en js fil så jag tar bort de
 let cordsData;
+let aqiData;
 // --------------------------------------------------
 // Initiera globala variabler och händelsehanterare
 function init1() {
